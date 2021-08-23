@@ -1,0 +1,52 @@
+using System;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+using Gymate7.View;
+using Gymate7.Model;
+using Gymate7.Services;
+using Gymate7.ViewModel;
+
+namespace Gymate7
+{
+    public partial class App : Application
+    {
+        public static Theme AppTheme { get; set; }
+        public enum Theme
+        {
+            Light,
+            Dark
+        }
+        public static int AppFontSize = 20;
+        public static string PhoneNumber="";
+        static GymLocalDB database;
+        public static GymLocalDB Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new GymLocalDB();
+                }
+                return database;
+            }
+        }
+        public App()
+        {
+            InitializeComponent();
+
+            MainPage = new NavigationPage(new MainPage());
+        }
+
+        protected override void OnStart()
+        {
+        }
+
+        protected override void OnSleep()
+        {
+        }
+
+        protected override void OnResume()
+        {
+        }
+    }
+}
