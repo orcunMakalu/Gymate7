@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Gymate7" Title="Exercises"
+             x:Class="Gymate7.View.GymPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Get data by date"
+                 Order="Secondary"
+                 Priority="0" Clicked="ToolbarItem_Clicked"/>
+        <ToolbarItem Text="History"
+                 Order="Secondary"
+                 Priority="1" Clicked="ToolbarItem_Clicked_1"/>
+        <ToolbarItem Text="Settings"
+                 Order="Secondary"
+                 Priority="2" Clicked="ToolbarItem_Clicked_2" />
+    </ContentPage.ToolbarItems>
+    <Grid BackgroundColor="RoyalBlue" Padding="20">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <ScrollView>
+            <StackLayout Orientation="Vertical">
+                <Grid Padding="10">
+                    <Frame CornerRadius="20" BackgroundColor="{DynamicResource BackgroundColor1}">
+                        <StackLayout>
+                            <Label FontSize="{Binding FontSize}" Text="Overhead Shoulder Press" TextColor="{DynamicResource TextSecondaryColor}" />
+                            <StackLayout>
+                                <Entry Placeholder="Kg" PlaceholderColor="LightGray" Text="{Binding OverheadShoulderPress,Mode=TwoWay}" TextColor="{DynamicResource TextSecondaryColor}" FontSize="16" MaxLength="7" Keyboard="Numeric" >
+
+                                </Entry>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+                <Grid Padding="10">
+                    <Frame CornerRadius="20" BackgroundColor="{DynamicResource BackgroundColor1}">
+                        <StackLayout>
+                            <Label FontSize="{Binding FontSize}" Text="Side Lateral Raise" TextColor="{DynamicResource TextSecondaryColor}" />
+                            <StackLayout>
+                                <Entry Placeholder="Kg" PlaceholderColor="LightGray" TextColor="{DynamicResource TextSecondaryColor}" Text="{Binding SideLateralRaise,Mode=TwoWay}" FontSize="16" MaxLength="7" Keyboard="Numeric" >
+
+                                </Entry>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+                <Grid Padding="10">
+                    <Frame CornerRadius="20" BackgroundColor="{DynamicResource BackgroundColor11}">
+                        <StackLayout>
+                            <Label FontSize="{Binding FontSize}" Text="Front raise" TextColor="{DynamicResource TextSecondaryColor}"/>
+                            <StackLayout>
+                                <Entry Placeholder="Kg" PlaceholderColor="LightGray" TextColor="{DynamicResource TextSecondaryColor}" Text="{Binding FrontRaise,Mode=TwoWay}" FontSize="16" MaxLength="7" Keyboard="Numeric" >
+
+                                </Entry>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+                <Grid Padding="10">
+                    <Frame CornerRadius="20" BackgroundColor="{DynamicResource BackgroundColor1}">
+                        <StackLayout>
+                            <Label FontSize="{Binding FontSize}" Text="Bench Press" TextColor="{DynamicResource TextSecondaryColor}" />
+                            <StackLayout>
+                                <Entry Placeholder="Kg" PlaceholderColor="LightGray" Text="{Binding BenchPress,Mode=TwoWay}" TextColor="{DynamicResource TextSecondaryColor}" FontSize="16" MaxLength="7" Keyboard="Numeric" >
+
+                                </Entry>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+                <Grid Padding="10">
+                    <Frame CornerRadius="20" BackgroundColor="{DynamicResource BackgroundColor1}">
+                        <StackLayout>
+                            <Label FontSize="{Binding FontSize}"  Text="Incline Bench Press" TextColor="{DynamicResource TextSecondaryColor}"/>
+                            <StackLayout>
+                                <Entry Placeholder="Kg" PlaceholderColor="LightGray" Text="{Binding InclineBenchPress,Mode=TwoWay}" TextColor="{DynamicResource TextSecondaryColor}" FontSize="16" MaxLength="7" Keyboard="Numeric" >
+
+                                </Entry>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+                <Grid Padding="10">
+                    <Frame CornerRadius="20" BackgroundColor="{DynamicResource BackgroundColor1}">
+                        <StackLayout>
+                            <Label FontSize="{Binding FontSize}" Text="Lat Pull Down" TextColor="{DynamicResource TextSecondaryColor}" />
+                            <StackLayout>
+                                <Entry Placeholder="Kg" PlaceholderColor="LightGray" Text="{Binding LatPullDown,Mode=TwoWay}" TextColor="{DynamicResource TextSecondaryColor}" FontSize="16" MaxLength="7" Keyboard="Numeric" >
+
+                                </Entry>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+                <Grid Padding="10">
+                    <Frame CornerRadius="20" BackgroundColor="{DynamicResource BackgroundColor1}">
+                        <StackLayout>
+                            <Label FontSize="{Binding FontSize}" Text="Barbell Row" TextColor="{DynamicResource TextSecondaryColor}"/>
+                            <StackLayout>
+                                <Entry Placeholder="Kg" PlaceholderColor="LightGray" Text="{Binding BarbellRow,Mode=TwoWay}" TextColor="{DynamicResource TextSecondaryColor}" FontSize="16" MaxLength="7" Keyboard="Numeric" >
+
+                                </Entry>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+                <Grid Padding="10">
+                    <Frame CornerRadius="20" BackgroundColor="{DynamicResource BackgroundColor1}">
+                        <StackLayout>
+                            <Label FontSize="{Binding FontSize}" Text="Lat Rope Pull Down" TextColor="{DynamicResource TextSecondaryColor}"/>
+                            <StackLayout>
+                                <Entry Placeholder="Kg" PlaceholderColor="LightGray" Text="{Binding LatRopePullDown,Mode=TwoWay}" FontSize="16" MaxLength="7" Keyboard="Numeric" >
+
+                                </Entry>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+                <Grid Padding="10">
+                    <Frame CornerRadius="20" BackgroundColor="{DynamicResource BackgroundColor1}" >
+                        <StackLayout>
+                            <Label FontSize="{Binding FontSize}" Text="Squat" />
+                            <StackLayout>
+                                <Entry Placeholder="Kg" PlaceholderColor="LightGray" Text="{Binding Squat,Mode=TwoWay}" TextColor="{DynamicResource TextSecondaryColor}" FontSize="16" MaxLength="7" Keyboard="Numeric" >
+
+                                </Entry>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+                <Grid Padding="10">
+                    <Frame CornerRadius="20" BackgroundColor="{DynamicResource BackgroundColor1}">
+                        <StackLayout>
+                            <Label FontSize="{Binding FontSize}" Text="Leg Press" />
+                            <StackLayout>
+                                <Entry Placeholder="Kg" PlaceholderColor="LightGray" Text="{Binding LegPress,Mode=TwoWay}" TextColor="{DynamicResource TextSecondaryColor}" FontSize="16" MaxLength="7" Keyboard="Numeric" >
+
+                                </Entry>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+                <Grid Padding="10">
+                    <Frame CornerRadius="20" BackgroundColor="{DynamicResource BackgroundColor1}">
+                        <StackLayout>
+                            <Label FontSize="{Binding FontSize}" Text="Calf Raise"  />
+                            <StackLayout>
+                                <Entry Placeholder="Kg" PlaceholderColor="LightGray" Text="{Binding CalfRaise,Mode=TwoWay}" TextColor="{DynamicResource TextSecondaryColor}" FontSize="16" MaxLength="7" Keyboard="Numeric" >
+
+                                </Entry>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+            </StackLayout>
+           
+        </ScrollView>
+        <Button Command="{Binding SaveCommand}" Text="Save" Grid.Row="1" TextColor="White" BackgroundColor="CornflowerBlue"/>
+    </Grid>
+    
+</ContentPage>
